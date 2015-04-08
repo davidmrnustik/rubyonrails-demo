@@ -1,4 +1,4 @@
 <h1>calendar</h1>
 
-<%= @time.year %> <%= @time.strftime("%B") %> Day of the week <%= day_of_week = @time.strftime("%u").to_i %>
-<%= calendar(day_of_week).html_safe %>
+<%= @time.year %> <%= day_month = @time.month %> <%= @time.strftime("%B") %> Day of the week <%= day_of_week = @time.strftime("%u").to_i %> <%= day_today = @time.strftime("%d").to_i %>
+<%= calendar(day_of_week, day_today, day_month).html_safe %>
