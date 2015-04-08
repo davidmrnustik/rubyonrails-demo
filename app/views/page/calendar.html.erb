@@ -1,0 +1,4 @@
+<h1>calendar</h1>
+
+<%= @time.year %> <%= @time.strftime("%B") %> Day of the week <%= day_of_week = @time.strftime("%u").to_i %>
+<%= calendar(day_of_week).html_safe %>

@@ -1,0 +1,30 @@
+<h1>Heloo</h1>
+<p>
+	It is now <%= @time %>
+</p>
+<p>
+	Time to say
+	<%= link_to "Goodbye", say_goodbye_path %>!
+</p>
+
+<p>
+	<%= "cow" + @big + "boy" %>
+</p>
+<p>
+	<%= 1.hour.from_now %>
+</p>
+<ul>
+<% for file in @files %>
+	<li>file name is: <%= file %></li>
+<% end %>
+</ul>
+
+<ul>
+<% for word in @words %>
+	<li><%= word %></li>
+<% end %>
+</ul>
+
+<div class="dave">
+	<%= link_to "Tech Dave", dave_teach_path %>
+</div>
