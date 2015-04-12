@@ -7,27 +7,31 @@ module PageHelper
 		end
 	end
 
-	def calendar( day_of_week, day_today, day_month )
-	  months = [" ", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    month_days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    t_today = []
-    f_today = []
-    x = 1
-    day = day_today + 1
-    
-    while x < day_today
-      t_today.push(x)
-      x += 1
-    end
-    
-    while day <= month_days[day_month]
-      f_today.push(day)
-      day += 1
-    end
-        
-		cal = "<table class=\"calendar\">\n\t<tr>\n"
-		days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-		day_of_week = day_of_week - 1
+	def calendar( month, year )
+		current_date = Date.new(year, month, 1)
+
+		prev_month = month - 1
+		prev_year = year
+		if(prev_month <= 0)
+			prev_month = 12
+			prev_year = year - 1
+		end
+
+		next_month = month + 1
+		next_year = year
+		if(next_month >= 12)
+			next_month = 1
+			next_year = year + 1
+		end
+
+		cal = "" # this forced to be a following line a normal string
+		cal += link_to("Prev", calendar_path(:month=>prev_month, :year=>prev_year))
+		cal += " "
+		cal += link_to("Next", calendar_path(:month=>next_month, :year=>next_year))
+		cal += current_date.strftime("%B")
+        day_of_week = current_date.strftime("%w").to_i
+		cal += "<table class=\"calendar\">\n\t<tr>\n"
+		days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 		days.each do |day|
 			cal += "\t\t<td>#{day}</td>\n"
 		end
@@ -35,15 +39,29 @@ module PageHelper
 		cal += "</tr>"
 		cal += "<tr>"
 		
-		day_of_week.times do |day|
-			cal += "<td>&nbsp;</td>"
+		day_of_week.times do
+			cal += "<td></td>"
 		end
-    
-    cal += "<td>#{day_today}</td>"
+
+		# Print the days of week starting with 1
+		(7 - day_of_week).times do |day|
+			cal += "<td>#{day + 1}</td>"
+		end
+
+		cal += "</tr>"
+		cal += "<tr>"
+
+		# Loop to do the in-between rows
+		
+
+		# Final loop to do the last row
+    	
+
 		cal += "\t</tr>"
 		cal += "</table>\n"
-		cal += "<p>" + t_today.join(" ").to_s + "</p>"
-		cal += "<p>" + f_today.join(" ").to_s + "</p>"
+		cal += "Month: #{month}<br />Year: #{year}<br/>"
+		cal += "Date:#{current_date}<br/>"
+		cal += day_of_week.to_s
 		
 		return cal
 	end

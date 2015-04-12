@@ -1,20 +1,30 @@
 Rails.application.routes.draw do
   
-  get 'page/home'
+  resources :movies do
+    get 'page/:page', action: :index, on: :collection
+  end
 
-  get 'page/about_us'
+  get 'people/index'
 
-  get 'page/contact_us'
+  get 'home' => 'page#home'
 
-  get 'page/products'
+  get 'about_us' => 'page#about_us'
 
-  get 'page/newsletter'
+  #get 'contact_us' => 'page#contact_us'
 
-  get 'page/blog'
+  #post 'contact_us' => 'page#contact_us'
 
-  get 'page/calendar'
+  match 'contact_us' => 'page#contact_us', :via => [:post, :get] # combine two above together
 
-  get 'page/articles'
+  get 'newsletter' => 'page#newsletter'
+
+  get 'blog' => 'page#blog'
+
+  get 'products' => 'page#products'
+
+  get 'calendar(/:year(/:month))' => 'page#calendar', :as => 'calendar'
+
+  get 'articles' => 'page#articles'
 
   get 'page/login'
 
@@ -36,7 +46,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'page#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
