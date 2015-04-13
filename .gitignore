@@ -16,3 +16,4 @@
 /tmp
 *.tmproj
 Gemfile.lock
+Gemfile
