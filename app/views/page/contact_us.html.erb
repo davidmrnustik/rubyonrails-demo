@@ -1,1 +1,48 @@
-contact us
+<h1>Contact us</h1>
+
+<% if flash['error'] # if there is something in my flash -i.e. error key-, that I wanna display that %> 
+	<div class="error"><%= flash['error'] %></div>
+<% end %>
+
+<% if !@submitted || @form_error %>
+
+	<%= form_for contact_us_path, method: "POST" do %>
+		<%= label_tag 'name', "Enter your full name:" %>
+		<%= text_field_tag 'name', @name, autofocus: "autofocus", placeholder: "Enter your name" %><br/>
+		<%= label_tag 'email', "Enter your email:" %>
+		<%= email_field_tag 'email', @email, placeholder: "Enter your email" %><br/>
+		<%= label_tag 'question', "Enter your question:" %><br/>
+
+		<%= text_area_tag 'question', @question, size: "50x10", placeholder: "Enter your question" %><br/>
+		<%= check_box_tag 'newsletter', "newsletter", @newsletter %>
+		Subscribe to my newsletter?<br />
+
+		<%= radio_button_tag 'gender', "Male", @male %> Male <br />
+		<%= radio_button_tag 'gender', "Female", @female %> Female<br />
+
+		<%= select_tag 'product', options_for_select(
+									[
+										['Skis', 0],
+										['Poles', 1],
+										['Boots', 2],
+									], @product) %>
+
+		<br />
+		<%= submit_tag "Ask question" %>
+	<% end %>
+<% else %>
+	Thank for your information.
+	
+	<pre>
+		<%# params.each do |key, value| #DEBUGGING ONLY %> 
+			<%#= key + " ==> " + value %>
+		<%# end %>
+	</pre>
+	<p>Your name is <%= @name %></p>
+	<p>Your email is <%= @email %></p>
+	<p>Your question is <%= @question %></p>
+	<p>Gender: <%= @gender %></p>
+	<p>Newsletter: <% if @newsletter %>Yes<% else %>No<% end %></p>
+	<p>Your product is: <%= @product %></p>
+
+<% end %>
