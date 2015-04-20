@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"un",
+				"unless	unless … end"
+			],
+			[
 				"prod",
 				"products"
 			],
@@ -128,42 +132,42 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/page_controller.rb",
+			"file": "app/controllers/movies_controller.rb",
 			"settings":
 			{
-				"buffer_size": 877,
+				"buffer_size": 2317,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/helpers/page_helper.rb",
+			"file": "app/views/movies/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 1533,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/people.rb",
-			"settings":
-			{
-				"buffer_size": 181,
+				"buffer_size": 935,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/people_controller.rb",
+			"file": "app/models/movie.rb",
 			"settings":
 			{
-				"buffer_size": 93,
+				"buffer_size": 339,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/people/index.html.erb",
+			"file": "app/views/movies/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 141,
+				"buffer_size": 649,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/movies/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 1176,
 				"line_ending": "Unix"
 			}
 		}
@@ -246,33 +250,42 @@
 	[
 		"/C/Sites/demo",
 		"/C/Sites/demo/app",
-		"/C/Sites/demo/app/assets/images",
-		"/C/Sites/demo/app/assets/stylesheets",
 		"/C/Sites/demo/app/controllers",
 		"/C/Sites/demo/app/models",
 		"/C/Sites/demo/app/views",
+		"/C/Sites/demo/app/views/movies",
 		"/C/Sites/demo/app/views/people",
 		"/C/Sites/demo/app/views/shared",
+		"/C/Sites/demo/config",
 		"/C/Sites/demo/db",
 		"/C/Sites/demo/db/migrate"
 	],
 	"file_history":
 	[
+		"/C/Sites/demo/db/seeds.rb",
 		"/C/Sites/demo/config/routes.rb",
-		"/C/Sites/demo/db/migrate/20150411200020_create_people.rb",
+		"/C/Sites/demo/app/views/kaminari/_paginator.html.erb",
+		"/C/Sites/demo/Gemfile",
+		"/C/Sites/demo/app/views/movies/show.html.erb",
+		"/C/Sites/demo/app/views/movies/_form.html.erb",
+		"/C/Sites/demo/app/views/page/contact_us.html.erb",
+		"/C/Sites/demo/app/views/people/index.html.erb",
+		"/C/Sites/demo/app/controllers/page_controller.rb",
+		"/C/Sites/demo/app/controllers/people_controller.rb",
 		"/C/Sites/demo/app/models/people.rb",
+		"/C/Sites/demo/app/controllers/movies_controller.rb",
+		"/C/Sites/demo/app/models/movie.rb",
+		"/C/Sites/demo/app/assets/stylesheets/styles.css.scss",
+		"/C/Sites/demo/app/helpers/page_helper.rb",
+		"/C/Sites/demo/db/migrate/20150411200020_create_people.rb",
 		"/C/Sites/demo/db/development.sqlite3",
 		"/C/Sites/demo/app/controllers/products_controller.rb",
 		"/C/Sites/demo/app/views/products/index.html.erb",
-		"/C/Sites/demo/app/views/page/contact_us.html.erb",
 		"/C/Sites/demo/db/migrate/20150411191225_create_products.rb",
 		"/C/Sites/demo/app/views/shared/_nav.html.erb",
 		"/C/Sites/demo/app/views/page/calendar.html.erb",
 		"/C/Sites/demo/app/views/layouts/application.html.erb",
 		"/C/Sites/demo/app/views/say/hello.html.erb",
-		"/C/Sites/demo/Gemfile",
-		"/C/Sites/demo/app/assets/stylesheets/styles.css.scss",
-		"/C/Sites/demo/app/helpers/page_helper.rb",
 		"/C/Sites/demo/app/assets/stylesheets/application.css",
 		"/C/Sites/demo/app/views/layouts/_nav.html.erb",
 		"/C/Users/davidm/Documents/Sites/olivamudejar/repo/htdocs/.htaccess",
@@ -376,13 +389,7 @@
 		"/C/Sites/depot/config/initializers/filter_parameter_logging.rb",
 		"/C/Sites/depot/app/views/products/index.html.erb",
 		"/C/Sites/depot/app/views/products/edit.html.erb",
-		"/C/Sites/depot/app/views/products/_form.html.erb",
-		"/C/Sites/depot/app/views/products/show.json.jbuilder",
-		"/C/Sites/depot/app/assets/javascripts/products.js.coffee",
-		"/C/Sites/depot/vendor/assets/javascripts/.keep",
-		"/C/Sites/depot/test/integration/.keep",
-		"/C/Sites/depot/app/models/.keep",
-		"/C/Sites/depot/config/initializers/mime_types.rb"
+		"/C/Sites/depot/app/views/products/_form.html.erb"
 	],
 	"find":
 	{
@@ -400,6 +407,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"format",
 			"Put",
 			"p",
 			"}\n",
@@ -430,24 +438,24 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/page_controller.rb",
+					"file": "app/controllers/movies_controller.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 877,
+						"buffer_size": 2317,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								252,
-								252
+								560,
+								560
 							]
 						],
 						"settings":
@@ -455,93 +463,64 @@
 							"origPos": 0.0,
 							"syncScroll": false,
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/helpers/page_helper.rb",
+					"file": "app/views/movies/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1533,
+						"buffer_size": 935,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1238,
-								1238
-							]
-						],
-						"settings":
-						{
-							"origPos": 126.0,
-							"syncScroll": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 525.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/models/people.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 181,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								58,
-								86
+								156,
+								156
 							]
 						],
 						"settings":
 						{
 							"origPos": 0.0,
 							"syncScroll": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"word_wrap": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/controllers/people_controller.rb",
+					"buffer": 2,
+					"file": "app/models/movie.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 93,
+						"buffer_size": 339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								82,
-								82
+								280,
+								280
 							]
 						],
 						"settings":
@@ -554,37 +533,71 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/views/people/index.html.erb",
+					"buffer": 3,
+					"file": "app/views/movies/show.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 141,
+						"buffer_size": 649,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								131,
-								131
+								83,
+								83
 							]
 						],
 						"settings":
 						{
 							"origPos": 0.0,
 							"syncScroll": false,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/movies/_form.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								732,
+								732
+							]
+						],
+						"settings":
+						{
+							"origPos": 225.0,
+							"syncScroll": false,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -639,12 +652,56 @@
 		"selected_items":
 		[
 			[
-				"route",
+				"routes",
 				"config\\routes.rb"
+			],
+			[
+				"gemfil",
+				"Gemfile"
+			],
+			[
+				"seeds",
+				"db\\seeds.rb"
+			],
+			[
+				"show",
+				"app\\views\\movies\\show.html.erb"
+			],
+			[
+				"form",
+				"app\\views\\movies\\_form.html.erb"
 			],
 			[
 				"router",
 				"config\\routes.rb"
+			],
+			[
+				"conta",
+				"app\\views\\page\\contact_us.html.erb"
+			],
+			[
+				"index",
+				"app\\views\\movies\\index.html.erb"
+			],
+			[
+				"route",
+				"config\\routes.rb"
+			],
+			[
+				"moviecon",
+				"app\\controllers\\movies_controller.rb"
+			],
+			[
+				"movie",
+				"app\\models\\movie.rb"
+			],
+			[
+				"style",
+				"app\\assets\\stylesheets\\styles.css.scss"
+			],
+			[
+				"styles",
+				"app\\assets\\stylesheets\\styles.css.scss"
 			],
 			[
 				"inde",
@@ -657,10 +714,6 @@
 			[
 				"migrate",
 				"db\\migrate\\20150411191225_create_products.rb"
-			],
-			[
-				"conta",
-				"app\\views\\page\\contact_us.html.erb"
 			],
 			[
 				"nav",
@@ -679,10 +732,6 @@
 				"Gemfile"
 			],
 			[
-				"style",
-				"app\\assets\\stylesheets\\styles.css.scss"
-			],
-			[
 				"calen",
 				"app\\views\\page\\calendar.html.erb"
 			],
@@ -695,16 +744,8 @@
 				"app\\views\\say\\hello.html.erb"
 			],
 			[
-				"styles",
-				"app\\assets\\stylesheets\\styles.css.scss"
-			],
-			[
 				"applica",
 				"app\\views\\layouts\\application.html.erb"
-			],
-			[
-				"gemfil",
-				"Gemfile"
 			],
 			[
 				"gitig",
@@ -735,20 +776,12 @@
 				"app\\views\\comments\\_comment.html.erb"
 			],
 			[
-				"form",
-				"app\\views\\comments\\_form.html"
-			],
-			[
 				"sh",
 				"app\\views\\articles\\show.html.erb"
 			],
 			[
 				"_form",
 				"app\\views\\articles\\_form.html.erb"
-			],
-			[
-				"show",
-				"app\\views\\articles\\show.html.erb"
 			],
 			[
 				"comm",
@@ -781,10 +814,6 @@
 			[
 				"new",
 				"app\\views\\articles\\new.html.erb"
-			],
-			[
-				"index",
-				"app\\views\\articles\\index.html.erb"
 			],
 			[
 				"contrcart",
@@ -927,7 +956,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 211.0,
+	"side_bar_width": 218.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
