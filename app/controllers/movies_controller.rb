@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate, except: [:index, :show]
+  before_filter :authenticate
 
   # GET /movies
   # GET /movies.json

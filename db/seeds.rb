@@ -9,6 +9,10 @@
 require 'faker'
 include Faker # if we include it, we do not need to use it like Faker::Name.x
 
+#dave = User.find_by_email("david@serviciografico.com")
+#dave.admin = true
+#dave.save!
+
 formats = %w(Beta VHS IMAX HD SuperHD 4K DVD BlueRay)
 images = %w(skis.jpg boots.jpg poles.jpg)
 
