@@ -17,6 +17,7 @@ formats = %w(Beta VHS IMAX HD SuperHD 4K DVD BlueRay)
 images = %w(skis.jpg boots.jpg poles.jpg)
 
 Movie.destroy_all
+Comment.destroy_all
 
 100.times do
 	movie = Movie.create(	name: "#{Company.bs}",
@@ -28,5 +29,14 @@ Movie.destroy_all
 							image: "movies/" + images[rand(images.length)],
 							thumbnail: "movies/" + images[rand(images.length)],
 						)
+	if(!movie.nil?)
+  	movie.save!
+  end
+  	(rand(0..10)).times do 
+  	  movie.comments.create(author: "#{Name.name}",
+  	                        content: Lorem.sentences(3).join("<br />").html_safe,
+  	                        rating: rand(1..10)
+  	                        )
+    end
 	puts movie.inspect
 end

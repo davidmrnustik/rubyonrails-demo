@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :movies do
     get 'page/:page', action: :index, on: :collection
+    resources :comments #nested route, gives me URL: /movies/number/comments
+    #delete 'movie/:id/comments/:comment_id', controller: :comments, action: :destroy, as: "Destroy Comment"
   end
 
   get 'people/index'

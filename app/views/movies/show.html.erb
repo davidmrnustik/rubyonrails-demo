@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<p>Average Rating: <%= stars((@movie.comments.average(:rating)).round) %></p>
 
 <p>
   <strong>Name:</strong>
@@ -39,6 +40,19 @@
   <strong>Thumbnail Image:</strong>
   <%= image_tag(@movie.image) %>
 </p>
+
+<%= render 'shared/comment_form' %>
+
+<h3>Comments</h3>
+<% @movie.comments.descending.each do |comment| %>
+	<p><%= time_ago_in_words(comment.created_at) %> ago, <strong><%= comment.author %></strong> said:</p>
+	<p><%= comment.content.html_safe %></p>
+	<p>Rating: <%= stars(comment.rating) %></p>
+	<% if is_admin? %>
+		<%= link_to "Delete Comment", movie_comment_path(@movie, comment), data: { confirm: 'Are you sure?' }, method: :delete %>
+	<% end %>
+	<hr/>
+<% end %>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>

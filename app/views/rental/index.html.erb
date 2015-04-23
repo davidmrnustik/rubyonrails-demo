@@ -1,3 +1,7 @@
+<% if is_admin? %>
+	<h2>ADMIN!</h2>
+	<%= link_to "Movies", movies_path %>
+<% end %>
 <h1>Listing movies</h1>
 
 <%= paginate @movies %>
