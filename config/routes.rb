@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'movie/:id/mail' => 'movies#mail', :as => 'mail_movie'
+  get 'movie/:id/spam' => 'movies#spam', :as => 'spam_movie'
   get 'rental' => 'rental#index' 
 
   get 'rental/show/:id' => "rental#show", :as => 'rental_show'

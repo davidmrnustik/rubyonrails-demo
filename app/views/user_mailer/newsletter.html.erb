@@ -1,0 +1,12 @@
+<h1>UserMailer#newsletter</h1>
+
+<p>
+  <%= @greeting %>, find me in app/views/user_mailer/newsletter.html.erb
+<%= @movie.proper_name %>
+</p>
+<p>
+	<%= image_tag "http://locahost:3000/#{@movie.image}" %>
+</p>
+<p>
+	<%= link_to @movie.name, movie_url(@movie) %>
+</p>

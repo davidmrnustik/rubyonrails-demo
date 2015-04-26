@@ -1,7 +1,22 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :set_movie, only: [:show, :edit, :update, :destroy, :mail, :spam]
   before_filter :authenticate
 
+  def mail # mail_movie_path
+    UserMailer.newsletter(@movie, current_user).deliver
+    redirect_to @movie, notice: "Message was successfully sent."
+  end
+  
+  def spam # spam_movie_path
+    # Get all of the users
+    # Loop through and send an email to each one
+    users = User.all #where(newsletter: true) 
+    users.each do |user|
+      UserMailer.newsletter(@movie, user).deliver
+    end
+    redirect_to movies_path, notice: "Message was successfully sent."
+  end
+  
   # GET /movies
   # GET /movies.json
   def index
@@ -70,7 +85,10 @@ class MoviesController < ApplicationController
 
   private
     def authenticate
-      authenticate_user! && current_user.admin?
+      authenticate_user! && current_user.try(:admin?)
+      if !current_user.try(:admin?)
+        redirect_to root_path
+      end
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_movie
