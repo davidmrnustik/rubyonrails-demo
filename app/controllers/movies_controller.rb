@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
   def spam # spam_movie_path
     # Get all of the users
     # Loop through and send an email to each one
-    users = User.all #where(newsletter: true) 
+    users = User.all #.where(newsletter: true) 
     users.each do |user|
       UserMailer.newsletter(@movie, user).deliver
     end
@@ -62,8 +62,12 @@ class MoviesController < ApplicationController
   # PATCH/PUT /movies/1
   # PATCH/PUT /movies/1.json
   def update
+    users = User.all.where(newsletter: true)
     respond_to do |format|
       if @movie.update(movie_params)
+        users.each do |user|
+  	      UserMailer.newsletter(@movie, user).deliver
+        end
         format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
         format.json { render :show, status: :ok, location: @movie }
       else

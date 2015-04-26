@@ -36,5 +36,6 @@
 	</nav><!-- end of top nav -->
 <% if user_signed_in? %>
 	Welcome, <%= current_user.full_name %><br/>
-	Admin: <%= current_user.admin %>, (<%= current_user.email%>)
+	Admin: <%= current_user.admin %>, (<%= current_user.email%>)<br/>
+	Newsletter: <%= current_user.newsletter %>
 <% end %>

@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
+<% if @movie.comments.count != 0 %>
 <p>Average Rating: <%= stars((@movie.comments.average(:rating)).round) %></p>
-
+<% end %>
 <p>
   <strong>Name:</strong>
   <%= @movie.proper_name %>
