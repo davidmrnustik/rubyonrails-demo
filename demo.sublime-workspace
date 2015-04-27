@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"border",
+				"border"
+			],
+			[
 				"un",
 				"unless	unless … end"
 			],
@@ -30,10 +34,6 @@
 			[
 				"day",
 				"day_of_week"
-			],
-			[
-				"border",
-				"border-collapse"
 			],
 			[
 				"back",
@@ -132,50 +132,58 @@
 	"buffers":
 	[
 		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 2764,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "app/controllers/movies_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2317,
+				"buffer_size": 3160,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/styles.css.scss",
+			"settings":
+			{
+				"buffer_size": 4368,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/rental_controller.rb",
+			"settings":
+			{
+				"buffer_size": 189,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/rental/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 714,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "app/views/movies/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 935,
-				"line_ending": "Unix"
+				"buffer_size": 1145,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Gemfile",
+			"file": "app/views/rental/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 1380,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/movie.rb",
-			"settings":
-			{
-				"buffer_size": 339,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/movies/show.html.erb",
-			"settings":
-			{
-				"buffer_size": 649,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/movies/_form.html.erb",
-			"settings":
-			{
-				"buffer_size": 1176,
+				"buffer_size": 600,
 				"line_ending": "Unix"
 			}
 		}
@@ -261,7 +269,6 @@
 		"/C/Sites/demo/app/controllers",
 		"/C/Sites/demo/app/models",
 		"/C/Sites/demo/app/views",
-		"/C/Sites/demo/app/views/movies",
 		"/C/Sites/demo/app/views/people",
 		"/C/Sites/demo/app/views/shared",
 		"/C/Sites/demo/config",
@@ -271,18 +278,22 @@
 	"file_history":
 	[
 		"/C/Sites/demo/db/seeds.rb",
+		"/C/Sites/demo/db/migrate/20150421200722_add_fields_to_users.rb",
+		"/C/Sites/demo/config/application.rb",
+		"/C/Sites/demo/app/views/movies/_form.html.erb",
+		"/C/Sites/demo/app/views/shared/_nav.html.erb",
+		"/C/Sites/demo/app/views/movies/show.html.erb",
+		"/C/Sites/demo/app/models/movie.rb",
+		"/C/Sites/demo/app/models/user.rb",
+		"/C/Sites/demo/Gemfile",
 		"/C/Sites/demo/config/routes.rb",
 		"/C/Sites/demo/app/views/kaminari/_paginator.html.erb",
-		"/C/Sites/demo/Gemfile",
-		"/C/Sites/demo/app/views/movies/show.html.erb",
-		"/C/Sites/demo/app/views/movies/_form.html.erb",
 		"/C/Sites/demo/app/views/page/contact_us.html.erb",
 		"/C/Sites/demo/app/views/people/index.html.erb",
 		"/C/Sites/demo/app/controllers/page_controller.rb",
 		"/C/Sites/demo/app/controllers/people_controller.rb",
 		"/C/Sites/demo/app/models/people.rb",
 		"/C/Sites/demo/app/controllers/movies_controller.rb",
-		"/C/Sites/demo/app/models/movie.rb",
 		"/C/Sites/demo/app/assets/stylesheets/styles.css.scss",
 		"/C/Sites/demo/app/helpers/page_helper.rb",
 		"/C/Sites/demo/db/migrate/20150411200020_create_people.rb",
@@ -290,7 +301,6 @@
 		"/C/Sites/demo/app/controllers/products_controller.rb",
 		"/C/Sites/demo/app/views/products/index.html.erb",
 		"/C/Sites/demo/db/migrate/20150411191225_create_products.rb",
-		"/C/Sites/demo/app/views/shared/_nav.html.erb",
 		"/C/Sites/demo/app/views/page/calendar.html.erb",
 		"/C/Sites/demo/app/views/layouts/application.html.erb",
 		"/C/Sites/demo/app/views/say/hello.html.erb",
@@ -394,10 +404,7 @@
 		"/C/Sites/depot/config.ru",
 		"/C/Users/davidm/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/Sites/depot/test/fixtures/.keep",
-		"/C/Sites/depot/config/initializers/filter_parameter_logging.rb",
-		"/C/Sites/depot/app/views/products/index.html.erb",
-		"/C/Sites/depot/app/views/products/edit.html.erb",
-		"/C/Sites/depot/app/views/products/_form.html.erb"
+		"/C/Sites/depot/config/initializers/filter_parameter_logging.rb"
 	],
 	"find":
 	{
@@ -415,6 +422,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"arial",
+			"940",
+			"18px",
+			"table",
 			"format",
 			"Put",
 			"p",
@@ -451,19 +462,51 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/movies_controller.rb",
+					"file": "config/routes.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2317,
+						"buffer_size": 2764,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								654,
-								654
+								67,
+								67
+							]
+						],
+						"settings":
+						{
+							"origPos": 0.0,
+							"syncScroll": false,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/movies_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								496,
+								496
 							]
 						],
 						"settings":
@@ -479,65 +522,33 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/movies/index.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 935,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154,
-								154
-							]
-						],
-						"settings":
-						{
-							"origPos": 0.0,
-							"syncScroll": false,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "Gemfile",
+					"file": "app/assets/stylesheets/styles.css.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1380,
+						"buffer_size": 4368,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1000,
-								1000
+								227,
+								227
 							]
 						],
 						"settings":
 						{
 							"origPos": 0.0,
 							"syncScroll": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
 						},
-						"translation.x": 0.0,
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -546,19 +557,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/models/movie.rb",
+					"file": "app/controllers/rental_controller.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 339,
+						"buffer_size": 189,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								295,
-								295
+								78,
+								82
 							]
 						],
 						"settings":
@@ -571,33 +582,31 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app/views/movies/show.html.erb",
+					"file": "app/views/rental/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 649,
+						"buffer_size": 714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								83,
-								83
+								335,
+								335
 							]
 						],
 						"settings":
 						{
 							"origPos": 0.0,
 							"syncScroll": false,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -608,34 +617,64 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/views/movies/_form.html.erb",
+					"file": "app/views/movies/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1176,
+						"buffer_size": 1145,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								732,
-								732
+								977,
+								977
 							]
 						],
 						"settings":
 						{
-							"origPos": 225.0,
+							"origPos": 270.0,
 							"syncScroll": false,
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 225.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/rental/show.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								355,
+								355
+							]
+						],
+						"settings":
+						{
+							"origPos": 45.0,
+							"syncScroll": false,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -690,16 +729,64 @@
 		"selected_items":
 		[
 			[
+				"styles",
+				"app\\assets\\stylesheets\\styles.css.scss"
+			],
+			[
+				"confapp",
+				"config\\application.rb"
+			],
+			[
+				"se",
+				"db\\seeds.rb"
+			],
+			[
+				"",
+				"app\\views\\rental\\show.html.erb"
+			],
+			[
+				"routes",
+				"config\\routes.rb"
+			],
+			[
+				"rentalshow",
+				"app\\views\\rental\\show.html.erb"
+			],
+			[
+				"moviesshow",
+				"app\\views\\movies\\show.html.erb"
+			],
+			[
+				"rentalindex",
+				"app\\views\\rental\\index.html.erb"
+			],
+			[
+				"movieinde",
+				"app\\views\\movies\\index.html.erb"
+			],
+			[
+				"rentalcon",
+				"app\\controllers\\rental_controller.rb"
+			],
+			[
+				"movies",
+				"app\\controllers\\movies_controller.rb"
+			],
+			[
+				"moviec",
+				"app\\controllers\\movies_controller.rb"
+			],
+			[
+				"nav",
+				"app\\views\\shared\\_nav.html.erb"
+			],
+			[
 				"gemfil",
 				"Gemfile"
 			],
 			[
 				"seed",
 				"db\\seeds.rb"
-			],
-			[
-				"routes",
-				"config\\routes.rb"
 			],
 			[
 				"seeds",
@@ -742,10 +829,6 @@
 				"app\\assets\\stylesheets\\styles.css.scss"
 			],
 			[
-				"styles",
-				"app\\assets\\stylesheets\\styles.css.scss"
-			],
-			[
 				"inde",
 				"app\\views\\products\\index.html.erb"
 			],
@@ -756,10 +839,6 @@
 			[
 				"migrate",
 				"db\\migrate\\20150411191225_create_products.rb"
-			],
-			[
-				"nav",
-				"app\\views\\shared\\_nav.html.erb"
 			],
 			[
 				"cont",
@@ -997,8 +1076,8 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 218.0,
+	"side_bar_visible": false,
+	"side_bar_width": 277.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -47,6 +47,18 @@ ActiveRecord::Schema.define(version: 20150426182456) do
     t.datetime "updated_at"
   end
 
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.text     "description"
+    t.decimal  "cost"
+    t.integer  "qty"
+    t.string   "image"
+    t.decimal  "weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -60,7 +72,7 @@ ActiveRecord::Schema.define(version: 20150426182456) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "admin"
+    t.boolean  "admin",                  default: false
     t.string   "first_name"
     t.string   "last_name"
     t.boolean  "newsletter",             default: false
