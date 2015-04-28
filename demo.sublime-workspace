@@ -151,7 +151,7 @@
 			"file": "app/assets/stylesheets/styles.css.scss",
 			"settings":
 			{
-				"buffer_size": 4368,
+				"buffer_size": 4528,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,15 +531,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4368,
+						"buffer_size": 4528,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								227,
-								227
+								736,
+								736
 							]
 						],
 						"settings":
@@ -548,8 +548,8 @@
 							"syncScroll": false,
 							"syntax": "Packages/SCSS/SCSS.tmLanguage"
 						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

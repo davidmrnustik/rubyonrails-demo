@@ -5,6 +5,12 @@ $primary_color: #333;
 $page_width: 940px;
 $accent_color: lighten($primary_color, 20%);
 $helvetica: "helvetica neue", arial, helvetica, sans-serif;
+@mixin blue_text($size) {
+	color:blue;
+	font-family: $helvetica;
+	font-size: $size;
+	font-variant: small-caps;
+}
 
 /* reset */
 * {
@@ -34,6 +40,10 @@ line-height: 18px;
 	}
 }
 /* layout */
+
+.product_title {
+	@include blue_text(21px);
+}
 
 #container {
 float: left;
