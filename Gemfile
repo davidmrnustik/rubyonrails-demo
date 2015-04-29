@@ -29,6 +29,7 @@ gem 'faker'
 gem 'kaminari'
 gem 'devise'
 gem 'tinymce-rails'
+gem 'compass'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

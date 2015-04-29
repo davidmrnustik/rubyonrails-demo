@@ -17,3 +17,5 @@
 *.tmproj
 Gemfile.lock
 Gemfile
+.DS_Store
+.sass-cache/

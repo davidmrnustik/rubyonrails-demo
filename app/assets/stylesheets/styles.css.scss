@@ -4,10 +4,12 @@
 $primary_color: #333;
 $page_width: 940px;
 $accent_color: lighten($primary_color, 20%);
-$helvetica: "helvetica neue", arial, helvetica, sans-serif;
+
+@import "fonts";
+
 @mixin blue_text($size) {
 	color:blue;
-	font-family: $helvetica;
+	font-family: $courier;
 	font-size: $size;
 	font-variant: small-caps;
 }
