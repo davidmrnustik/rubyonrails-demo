@@ -1,0 +1,40 @@
+@import "compass/css3";
+
+#three-column {
+  @include column-count(3);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.opacity-example {
+	background: red;
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+#opacity-20 {
+	@include opacity(0.2);
+}
+
+.ex {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+  @include clearfix;
+  p {
+    padding-top: 10px;
+  }
+}
+ 
+.gradient-example {
+  width: 80px;
+  height: 80px;
+  background: red;
+  float: left;
+  margin: 1em 1em 0 0;
+}
+ 
+// This will yield a radial gradient with an apparent specular highlight
+#radial-gradient {
+  @include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
+}

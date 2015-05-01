@@ -6,6 +6,8 @@ $page_width: 940px;
 $accent_color: lighten($primary_color, 20%);
 
 @import "fonts";
+@import "compass";
+@import "base";
 
 @mixin blue_text($size) {
 	color:blue;

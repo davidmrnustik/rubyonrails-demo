@@ -29,7 +29,9 @@ gem 'faker'
 gem 'kaminari'
 gem 'devise'
 gem 'tinymce-rails'
-gem 'compass'
+gem 'compass-rails'
+# gem 'compass'
+# gem 'compass-flex-box'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
