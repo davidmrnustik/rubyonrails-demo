@@ -20,3 +20,6 @@ Gemfile.lock
 Gemfile
 .DS_Store
 .sass-cache/
+public/assets/
+vendor/bundle/
+.bash_history
