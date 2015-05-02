@@ -146,7 +146,6 @@ PLATFORMS
 DEPENDENCIES
   actionview-encoded_mail_to
   coffee-rails (~> 4.0.0)
-  compass
   compass-rails
   devise
   faker
