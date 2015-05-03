@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<% if @movie.comments.count != 0 %>
+<% if @movie.comments.count != 0 && @movie.comments(:rating) != nil %>
 <p>Average Rating: <%= stars((@movie.comments.average(:rating)).round) %></p>
 <% end %>
 <p>
@@ -48,7 +48,8 @@
 <% @movie.comments.descending.each do |comment| %>
 	<p><%= time_ago_in_words(comment.created_at) %> ago, <strong><%= comment.author %></strong> said:</p>
 	<p><%= comment.content.html_safe %></p>
-	<p>Rating: <%= stars(comment.rating) %></p>
+	<p>Rating: <% if comment.rating != nil %><%= stars(comment.rating) %><% else %>
+	  No rating<% end %></p>
 	<% if is_admin? %>
 		<%= link_to "Delete Comment", movie_comment_path(@movie, comment), data: { confirm: 'Are you sure?' }, method: :delete %>
 	<% end %>
